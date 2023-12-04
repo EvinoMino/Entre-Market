@@ -1,0 +1,255 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(255, 255, 255);
+}
+/* Header */
+header{
+    margin: 0;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(36, 35, 35);
+}
+
+ul{
+  background-color:rgb(36, 35, 35);
+    margin:0;
+    padding:0;
+    display:flex;
+    list-style-type:none;
+    
+
+}
+ul li{
+  background-color:rgb(36, 35, 35);
+}
+ul li a{
+    background-color:rgb(36, 35, 35);
+    color:gray;
+    font-size:20px;
+    text-decoration:none;
+    text-transform:uppercase;
+    padding:5px 60px;
+    margin:0px 50px;
+    position:relative;
+    transition: all .5s;
+}
+
+.navbar:hover{
+    background-color:rgba(215, 186, 0, 0.88);
+    color:white;
+}
+
+.navbar::before{
+    content: '';
+    position :absolute;
+    bottom: 12px;
+    left: 12px;
+    height: 12px;
+    width:12px;
+    border: 3px solid rgba(215, 186, 0, 0.88);
+    border-width: 0 0 3px 3px;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.navbar::after{
+    content: '';
+    position :absolute;
+    top: 12px;
+    right: 12px;
+    height: 12px;
+    width: 12px;
+    border: 3px solid rgba(215, 186, 0, 0.88);
+    border-width: 3px 3px 0 0;
+    opacity: 0;
+    transition: all 0.3s;
+}
+.navbar:hover::before{
+    opacity: 1;
+    bottom: -8px;
+    left: -8px;
+}
+.navbar:hover::after{
+    opacity: 1;
+    top: -8px;
+    right: -8px;
+}
+/* Header */
+
+
+/* Search Bar */
+.search-bar{
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 20px;
+    padding-right: 100px;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+}
+
+.search-bar h1{
+    flex:2;
+    outline:none;
+    color: grey;
+    padding: 9px 150px;
+}
+
+.bar{
+    width: 210px;
+    height: 40px;
+    display: flex;
+    align-items:center ;
+    border: 1px solid rgba(0, 0, 0, 0.603);
+    border-radius: 30px;
+    padding: 10px, 20px;
+}
+.bar input{
+    background:transparent;
+    flex:1;
+    border:0;
+    outline:none;
+    padding: 24px 20px;
+}
+/* Search Bar */
+
+
+/* Product */
+.nav_catalog{
+    display: flex;
+    position:absolute;
+    top: 200px;
+    left: 180px;
+    z-index: 999;
+    width: 1210px;
+    padding: 10px;
+    background: transparent;
+    border-bottom:1px solid rgba(0, 0, 0, 0.603); ;
+
+}
+.catalog{
+    padding-top: 20px;
+    display: flex;
+    list-style: none;
+    font-weight: bolder ;
+    background-color: white;
+}
+
+.catalog li {
+    display: inline-block;
+    padding: 0px 1px;
+    background-color: white;
+}
+
+.catalog a {
+    font-size: 20px;
+    transition: all 0.3s ease 0;
+    background-color: white;
+}
+
+.catalog li a:hover{
+    color: rgb(226, 204, 0);
+}
+.product {
+    flex: 0 0 auto;
+    width: 250px;
+    height: 450px;
+    margin-right: 40px;
+  }
+  
+.product-card {
+    position : absolute;
+    top: 300px;
+    left : 100px;
+    width: 300px;
+    height: 500px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+.product-card1 {
+    position : absolute;
+    top: 300px;
+    left : 450px;
+    width: 300px;
+    height: 500px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+.product-card2 {
+    position : absolute;
+    top: 300px;
+    left : 800px;
+    width: 300px;
+    height: 500px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+.product-card3 {
+    position : absolute;
+    top: 300px;
+    left : 1150px;
+    width: 300px;
+    height: 500px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.product-image {
+    position: relative;
+    width: 100%;
+    display: flex;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 10px ;
+}
+.timer-display{
+    padding: 0 10px;
+    background-color: rgb(47, 45, 45);
+    border-radius: 5px;
+
+}
+.timer {
+    background-color: transparent;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: transparent;
+    color: white;
+    font-size: 25px;
+    padding: 5px;
+}
+
+.product-title {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.product-price {
+    font-family: "Montserrat", sans-serif;
+    margin-top: 5px;
+}
+
+.bid-button {
+    font-family: "Montserrat", sans-serif;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: white;
+    color: black;
+    border-color: black;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.bid-button:hover{
+    background-color: rgb(36, 35, 35);
+    color:white;
+}
+
+
